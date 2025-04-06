@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}  <!-- Add this line to load crispy filters -->
+
+{% block title %}
+Signin
+{% endblock %}
+
+{% block body %}
+<h1>Login Your Account</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ form|crispy }}  <!-- This will now work because crispy is loaded -->
+    <button type="submit" class="btn btn-success btn-sm">Login</button>
+</form>
+{% endblock %}
