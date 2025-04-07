@@ -49,6 +49,13 @@ SECURE_SSL_REDIRECT = False
 SESSION_COOKIE_SECURE = False
 CSRF_COOKIE_SECURE = False
 SECURE_PROXY_SSL_HEADER = None  # Hapus atau comment baris ini jika ada
+
+CSRF_COOKIE_HTTPONLY = True
+CSRF_USE_SESSIONS = True
+CSRF_COOKIE_SAMESITE = 'Lax'
+CSRF_COOKIE_SECURE = False  # Set to True if using HTTPS
+CSRF_TRUSTED_ORIGINS = ['http://localhost:8000']  # Add your domain here if needed
+
 LOGOUT_REDIRECT_URL = 'home'
 
 MIDDLEWARE = [
